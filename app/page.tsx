@@ -9,6 +9,10 @@ import MoreStories from "./more-stories";
 import { getAllPosts } from "@/lib/api";
 import { CMS_NAME, CMS_URL } from "@/lib/constants";
 
+
+//TODO: revalidate fetches data every 60 seconds for now
+export const revalidate = 60;
+
 function Intro() {
   return (
     <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
