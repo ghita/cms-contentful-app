@@ -8,6 +8,7 @@ import CoverImage from "../../cover-image";
 
 import { Markdown } from "@/lib/markdown";
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
+import { RichText } from "@/components/RichText";
 
 export async function generateStaticParams() {
   const allPosts = await getAllPosts(false);
@@ -24,6 +25,8 @@ export default async function PostPage({
 }) {
   const { isEnabled } = draftMode();
   const { post, morePosts } = await getPostAndMorePosts(params.slug, isEnabled);
+
+  console.log("Post content: ", post.content);
 
   return (
     <div className="container mx-auto px-5">
@@ -58,7 +61,7 @@ export default async function PostPage({
 
         <div className="mx-auto max-w-2xl">
           <div className="prose">
-            <Markdown content={post.content} />
+            <RichText content={post.content} />
           </div>
         </div>
       </article>

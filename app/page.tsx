@@ -11,7 +11,7 @@ import { CMS_NAME, CMS_URL } from "@/lib/constants";
 
 
 //TODO: revalidate fetches data every 60 seconds for now
-export const revalidate = 60;
+export const revalidate = 10;
 
 function Intro() {
   return (
