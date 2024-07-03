@@ -24,6 +24,16 @@ const POST_GRAPHQL_FIELDS = `
           description
         }
       }
+      entries {
+        inline {
+          sys {
+            id
+          }
+          ... on Code {
+            text
+          }
+        }
+      }
     }
   }
 `;

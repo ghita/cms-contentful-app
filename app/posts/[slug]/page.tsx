@@ -61,7 +61,7 @@ export default async function PostPage({
 
         <div className="mx-auto max-w-2xl">
           <div className="prose">
-            <RichText content={post.content} />
+            <RichText richTextNode={post.content} />
           </div>
         </div>
       </article>

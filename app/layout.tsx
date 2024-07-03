@@ -13,6 +13,8 @@ const inter = Inter({
   display: "swap",
 });
 
+export const revalidate = 30;
+
 function Footer() {
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
