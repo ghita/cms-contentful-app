@@ -39,7 +39,7 @@ function renderOptions(links:any): Options {
         const asset = assetBlockMap.get(node.data.target.sys.id);
 
         // render the asset accordingly
-        return <ContentfulImage src={asset.url} width={180}/>;
+        return <ContentfulImage src={asset.url} width={1024}/>;
       },
     }
   }
