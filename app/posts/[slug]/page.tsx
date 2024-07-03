@@ -6,9 +6,11 @@ import Avatar from "../../avatar";
 import Date from "../../date";
 import CoverImage from "../../cover-image";
 
-import { Markdown } from "@/lib/markdown";
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
 import { RichText } from "@/components/RichText";
+
+//TODO: revalidate fetches data every 60 seconds for now
+export const revalidate = 10;
 
 export async function generateStaticParams() {
   const allPosts = await getAllPosts(false);
@@ -46,7 +48,7 @@ export default async function PostPage({
           )}
         </div>
         <div className="mb-8 sm:mx-0 md:mb-16">
-          <CoverImage title={post.title} url={post.coverImage.url} />
+          {post?.coverImage?.url && <CoverImage title={post.title} url={post.coverImage.url} />}
         </div>
         <div className="mx-auto max-w-2xl">
           <div className="mb-6 block md:hidden">
