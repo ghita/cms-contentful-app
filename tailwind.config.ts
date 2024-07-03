@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
+import colors from 'tailwindcss/colors';
 
 export default {
   content: [
@@ -13,6 +14,9 @@ export default {
         sans: ["var(--font-inter)"],
       },
     },
+    colors: {
+      primary: colors.gray[300],
+    }
   },
   future: {
     hoverOnlyWhenSupported: true,
