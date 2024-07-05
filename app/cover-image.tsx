@@ -18,7 +18,8 @@ export default function CoverImage({
     <ContentfulImage
       alt={`Cover Image for ${title}`}
       priority
-      width={1024}
+      width={720}
+      sizes="(max-width: 768px) 768px, 1920px"
       className={cn("shadow-small", {
         "hover:shadow-medium transition-shadow duration-200": slug,
       })}

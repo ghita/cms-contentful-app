@@ -1,5 +1,7 @@
 import Link from "next/link"
 import "@/app/globals.css"
+import authorImg from "@/public/author.jpeg"
+import Image from "next/image"
 
 
 export const metadata = {
@@ -16,7 +18,7 @@ export default function RootLayout({
   const header = (
     <header>
       <div className="text-center bg-gray-800 p-8 my-6 rounded-md">
-        <img src={`/author.jpeg`} alt="logo" width={40} height={40} className="mx-auto rounded-full"/>
+        <Image src={authorImg} width={80} alt="Author" className="mx-auto rounded-full"/>
         <div className="flex justify-center space-x-4">
           <Link href="/">
             <h1 className="text-3xl text-blue-300 underline font-bold">Ghita's blog</h1>
@@ -30,14 +32,6 @@ export default function RootLayout({
     </header>
   )
 
-  const footer = (
-    <footer>
-      <div className="border-t border-slate-400 mt-6 py-6 text-center text-slate-400">
-        <br />
-        <h3>Developed by Ghita</h3>
-      </div>
-    </footer>
-  )
 
   return (
     <html lang="en">
@@ -45,7 +39,6 @@ export default function RootLayout({
         <div className="mx-auto border-blue-500 max-w-2xl">
           {header}
           {children}
-          {footer}
         </div>
       </body>
     </html>
