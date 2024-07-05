@@ -17,10 +17,11 @@
     "contentful-import": "^9.0.4",
     "date-fns": "2.30.0",
     "markdown-to-jsx": "^7.4.7",
-    "next": "latest",
+    "next": "14.2.4",
     "postcss": "8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sharp": "^0.33.4",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
   }
