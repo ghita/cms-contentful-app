@@ -3,7 +3,7 @@ import ContentfulImage from "@/components/contentful-image";
 export default function PostImage({
   url
 }: {
-  title: string;
+  title?: string;
   url: string;
   slug?: string;
 }) {
