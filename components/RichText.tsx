@@ -2,7 +2,8 @@ import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
 import  { documentToReactComponents, Options } from '@contentful/rich-text-react-renderer'
 import Link from 'next/link'
 import Markdown  from "markdown-to-jsx";
-import ContentfulImage from '@/lib/contentful-image';
+import ContentfulImage from '@/components/contentful-image';
+import PostImage from './post-image';
 
 
 const CustomComponent = ({ title, description }: {title: string, description: string}) => (
@@ -39,7 +40,7 @@ function renderOptions(links:any): Options {
         const asset = assetBlockMap.get(node.data.target.sys.id);
 
         // render the asset accordingly
-        return <ContentfulImage src={asset.url} width={1024}/>;
+        return <PostImage url={asset.url}/>;
       },
     }
   }

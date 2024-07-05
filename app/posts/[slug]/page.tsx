@@ -4,10 +4,10 @@ import { draftMode } from "next/headers";
 import MoreStories from "../../more-stories";
 import Avatar from "../../avatar";
 import Date from "../../date";
-import CoverImage from "../../cover-image";
+import CoverImage from "../../../components/cover-image";
 
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
-import { RichText } from "@/components/RichText";
+import { RichText } from "@/components/richText";
 
 //TODO: revalidate fetches data every 60 seconds for now
 export const revalidate = 10;

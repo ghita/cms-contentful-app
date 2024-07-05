@@ -1,4 +1,4 @@
-import ContentfulImage from "../lib/contentful-image";
+import ContentfulImage from "@/components/contentful-image";
 import Link from "next/link";
 
 function cn(...classes: any[]) {
@@ -18,8 +18,12 @@ export default function CoverImage({
     <ContentfulImage
       alt={`Cover Image for ${title}`}
       priority
-      width={720}
-      sizes="(max-width: 768px) 768px, 1920px"
+      width={1024}
+      sizes="100vw"
+      style={{
+        width: '100%',
+        height: 'auto',
+      }}
       className={cn("shadow-small", {
         "hover:shadow-medium transition-shadow duration-200": slug,
       })}
