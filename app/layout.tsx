@@ -2,7 +2,7 @@ import Link from "next/link"
 import "@/app/globals.css"
 import authorImg from "@/public/author.jpeg"
 import Image from "next/image"
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
   title: 'Ghita\'s blog',
@@ -39,6 +39,7 @@ export default function RootLayout({
         <div className="mx-auto border-blue-500 max-w-2xl">
           {header}
           {children}
+          <GoogleAnalytics gaId="G-4JLDZV5Y54"/>
         </div>
       </body>
     </html>
