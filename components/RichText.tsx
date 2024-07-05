@@ -1,17 +1,8 @@
 import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
 import  { documentToReactComponents, Options } from '@contentful/rich-text-react-renderer'
-import Link from 'next/link'
 import Markdown  from "markdown-to-jsx";
-import ContentfulImage from '@/components/contentful-image';
 import PostImage from './post-image';
 
-
-const CustomComponent = ({ title, description }: {title: string, description: string}) => (
-  <div>
-    <h2>{title}</h2>
-    <p>{description}</p>
-  </div>
-);
 
 function renderOptions(links:any): Options {
   const assetBlockMap = new Map();
